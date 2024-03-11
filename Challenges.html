@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        body {
+
+
+            background-color: #14191f !important;
+        }
+
+        .navbar-brand {
+            font-size: x-large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+        }
+
+        /* New style for dropdown-item hover */
+        .navbar-nav .dropdown-menu .dropdown-item:hover {
+            color: #101820 !important;
+            font-weight: bold !important;
+        }
+
+        /* .nav1 {
+
+        background-image: url(pexels-adrien-olichon-2931290.jpg) !important;
+    } */
+        .nav1 {
+            background-color: #0e1418;
+        }
+
+        .navbar {
+            background: transparent !important;
+        }
+
+        .navbar-toggler {
+            /* transform: rotate(0deg); Initial rotation */
+            transition: transform 0.6s ease;
+            /* Add a smooth transition effect */
+        }
+
+        .navbar-toggler:hover {
+            transform: rotate(180deg) scale(0.9);
+            /* Rotate by 180 degrees and scale to 1.5 times its size */
+            background-color: rgb(33, 32, 32) !important;
+
+        }
+
+        .BAG {
+            background-color: #14191f !important;
+            color: white;
+        }
+
+        .chal {
+            height: 100%;
+            width: 100%;
+        }
+
+        .bor {
+            border: white 1px solid;
+        }
+
+        /* .cl1{
+        background-image: url(chal1.jpg);
+        background-size: cover;
+    } */
+    .flex-PASS-text {
+      font-size: 3rem;
+      text-shadow: 3px 3px 1px black;
+      color: white;
+      font-weight: 700;
+      /* Adjust the font size as needed for responsiveness */
+
+    }
+
+    .flex-PASS-text2 {
+      color: rgba(201, 144, 63, 0.996);
+      font-size: 3rem;
+      text-shadow: 2px 1px 2px black;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .next {
+        background-color: #28a745; /* Your desired color */
+        color: #fff; /* Text color for better readability */
+        border-color: #28a745; /* Border color */
+    }
+    .pre{
+        background-color: #212121;
+        color: white;
+        border-color:#212121 ;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Login Modal -->
+    <div class="modal fade " id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content BAG">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to FlexFusion</h5>
+                    <button type="button" class="close" data-dismiss="modal" data-toggle="popover"
+                        title="Login Succesfull" data-content="Welcome to FlexFusion" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary " data-dismiss="modal">Login</button>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    
+  </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!--SigUp Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content BAG">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">SignUp to FlexFusion</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="cexampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="cexampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="cexampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <div class="form-group">
+                            <label for="cexampleInputPassword1">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav1">
+        <nav class="navbar navbar-expand-lg navbar-dark  py-4 " style="background: #101820">
+            <div class="container-fluid">
+                <a class="navbar-brand" id="navbarBrand" href="#">FlexFitness</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu  bg-dark">
+                                <!-- <li><a class="dropdown-item text-light" href="#">Training</a></li> -->
+                                <li><a class="dropdown-item active text-light" href="Challenges.html">Challenges</a></li>
+                                <li><a class="dropdown-item text-light" href="Workout.html">Workout</a></li>
+                                <!-- <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-light" href="#">Support us</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="Contact.html">Contact us</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex ml-auto" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </form>
+                    <div class="m-2">
+                        <button class="btn btn-outline-danger" data-toggle="modal"
+                            data-target="#loginModal">login</button>
+                        <button class="btn btn-outline-danger" data-toggle="modal"
+                            data-target="#signupModal">SignUp</button>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="text-center my-2 col">
+                <span class="flex-PASS-text">Daily</span>
+                <span class="flex-PASS-text2">Challenges</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal1.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal2.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal3.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3 ">
+                <img src="chal4.jpg" class="chal" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-1 bor col-12 col-sm-12 col-md-3">
+                <img src="chal5.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal6.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal7.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3 ">
+                <img src="chal8.jpg" class="chal" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal9.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal10.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal11.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3 ">
+                <img src="chal12.jpg" class="chal" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal13.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal14.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal15.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3 ">
+                <img src="chal16.jpg" class="chal" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-1 bor  text-center col-12 col-sm-12 col-md-3">
+                <img src="chal17.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor text-center col-12 col-sm-12 col-md-3">
+                <img src="chal18.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor col-12 col-sm-12 col-md-3">
+                <img src="chal19.jpg" class="chal" alt="">
+            </div>
+            <div class="col p-1 bor col-12 col-sm-12 col-md-3 ">
+                <img src="chal20.jpg" class="chal" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Pagination -->
+    <div class="dev1  m-5"> <nav aria-label="Page navigation example ">
+        <ul class="pagination  justify-content-center">
+          <li class="page-item">
+            <a class="page-link pre">Previous</a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">6</a></li>
+          <li class="page-item">
+            <a class="page-link next" href="#">Next</a>
+          </li>
+        </ul>
+      </nav></div>
+   
+      
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Change navbar-brand text on navbar-toggler click
+            $(".navbar-toggler").click(function () {
+                if ($("#navbarBrand").text() === "FlexFitness") {
+                    $("#navbarBrand").text("FF");
+                } else {
+                    $("#navbarBrand").text("FlexFitness").removeClass("shortened");
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
