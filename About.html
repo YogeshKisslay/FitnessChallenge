@@ -524,7 +524,8 @@ background-size: cover;
     </div>
 
   </section>
-  <!-- Include jQuery -->
+<!-- Include jQuery -->
+
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
@@ -540,6 +541,23 @@ background-size: cover;
         }
       });
     });
+
+    // for popover of passes
+    $(document).ready(function () {
+      // Initialize popovers
+      $('[data-toggle="popover"]').popover();
+
+      // Close popover on click outside
+      $('body').on('click', function (e) {
+        $('[data-toggle="popover"]').each(function () {
+          // Hide any open popovers when anywhere on the body is clicked
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+          }
+        });
+      });
+    });
+
   </script>
 
 
