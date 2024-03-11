@@ -436,10 +436,8 @@ background-size: cover;
             </div>
           </div>
           <div class="row text-center butt">
-            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-light"  data-toggle="popover"
-                title="FlexElite" data-placement="top" data-content="Try our free trial!">TRY FOR FREE</button></div>
-            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-success" title="FlexElite"
-                data-toggle="popover" data-placement="top" data-content="Learn more about our services!">LEARN MORE</button></div>
+            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-light" >TRY FOR FREE</button></div>
+            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-success">LEARN MORE</button></div>
           </div>
 
         </div>
@@ -468,10 +466,8 @@ background-size: cover;
             </div>
           </div>
           <div class="row text-center butt">
-            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-light" data-toggle="popover"
-                title="FlexPro" data-placement="top" data-content="Try our free trial!">TRY FOR FREE</button></div>
-            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-success" title="FlexPro"
-                data-toggle="popover" data-placement="top" data-content="Learn more about our services!">LEARN MORE</button></div>
+            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-light">TRY FOR FREE</button></div>
+            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-success">LEARN MORE</button></div>
           </div>
 
         </div>
@@ -500,10 +496,8 @@ background-size: cover;
             </div>
           </div>
           <div class="row text-center butt">
-            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-light" data-toggle="popover"
-                title="FlexDesi" data-placement="top" data-content="Try our free trial!">TRY FOR FREE</button></div>
-            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-success" title="FlexDesi"
-                data-toggle="popover" data-placement="top" data-content="Learn more about our services!">LEARN MORE</button></div>
+            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-light">TRY FOR FREE</button></div>
+            <div class="col-md-6 col-sm-6"><button type="button" class="btn btn-success">LEARN MORE</button></div>
           </div>
         </div>
       </div>
@@ -524,8 +518,7 @@ background-size: cover;
     </div>
 
   </section>
-<!-- Include jQuery -->
-
+  <!-- Include jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
@@ -541,23 +534,6 @@ background-size: cover;
         }
       });
     });
-
-    // for popover of passes
-    $(document).ready(function () {
-      // Initialize popovers
-      $('[data-toggle="popover"]').popover();
-
-      // Close popover on click outside
-      $('body').on('click', function (e) {
-        $('[data-toggle="popover"]').each(function () {
-          // Hide any open popovers when anywhere on the body is clicked
-          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            $(this).popover('hide');
-          }
-        });
-      });
-    });
-
   </script>
 
 
